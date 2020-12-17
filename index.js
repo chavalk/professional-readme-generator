@@ -62,6 +62,9 @@ function init() {
                 name: 'email',
             },
         ])
+        .then((response) => 
+            writeToFile("README.md", response)
+        );
 }
 
 // function call to initialize program
