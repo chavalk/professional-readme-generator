@@ -1,5 +1,7 @@
-// Bringing in inquirer
+// Bringing in inquirer, generateMarkdown, and fs
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs');
 
 // array of questions for user
 const questions = [
@@ -10,11 +12,15 @@ const questions = [
     "What are the contribution guidelines for your application?",
     "What are the testing instructions for your application?",
     "What is you GitHub username?",
-    "What is you email address?"
+    "What is you email address?",
+    "Please choose a license for your application:",
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => 
+        err ? console.error(err) : console.log('Success!')
+    );
 }
 
 // function to initialize program
@@ -61,9 +67,15 @@ function init() {
                 message: questions[7],
                 name: 'email',
             },
+            {
+                type: 'list',
+                message: questions[8],
+                choices: ['MIT', 'Mozilla', 'Apache'],
+                name: 'license',
+            },
         ])
         .then((response) => 
-            writeToFile("README.md", response)
+            writeToFile("README.md", generateMarkdown(response))
         );
 }
 
