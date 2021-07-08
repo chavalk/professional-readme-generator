@@ -1,19 +1,39 @@
 # Professional README Generator
 
-This assignment cosisted of building a command line application that would generate a README based on user input. The application has a couple of JavaScript files that interact with each other to complete the process. After the user runs node index.js, the application starts prompting the user for all the information to be added to the the README. Once the user finishes answering all the questions, the data answered by the user is sent to the generateMarkdown JavaScript file and the actual file is built with all the different things needed to build the file as an actual read me. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-The application uses the inquirer package to promp the user and the fs package to create the file.
+## Description
 
-Below is a screenshot of the prompts with all questions answered in the terminal:
+A command line application built to facilitate the creation of a professional readme.
 
-![Professional README Generator](./images/prompts.png)
+## What the project does
 
-Below is a screenshot of the sample README generated with the prompts shown above:
+The project prompts users for information to be included in the readme. After all questions are answered, a formatted readme file is generated. Below is a GIF showing the application in action.
 
-![Professional README Generator](./images/sample.png)
+![professional-readme-generator](./images/professional-readme-generator.gif)
 
-## URL
+## Why is the project useful
 
-This is the URL for a video showing the application in action:
+The project makes it easy for developers to generate a professional readme and allows them to focus their precious time developing as opposed to looking up markup for a readme.
 
-https://drive.google.com/file/d/1Q18abOQeYPBV_4ZPk2ZLeVLLro0Lakec/view
+## How can users get started with this project
+
+Because it's a command line application, the repo has to be cloned, the npm packages installed, and the application initiated from a terminal.
+
+## What technologies were used with this project
+
+* JavaScript
+* Inquirer
+* FS
+
+## Where can users get help with your project
+
+My GitHub username is: chavalk
+
+Link: https://github.com/chavalk
+
+If you have additional questions, feel free to reach me at chavalk@hotmail.com.
+
+## Who maintains and contributes to the project
+
+Currently I'm the only person maintaining and contributing to the project.
